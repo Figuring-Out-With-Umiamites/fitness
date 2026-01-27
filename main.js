@@ -57,6 +57,7 @@ async function init() {
         initObserver();
         initTestimonialCarousel();
         initNavScroll();
+        initLazyImages();
         revealContent();
     } catch (error) {
         console.error(error);
@@ -97,7 +98,7 @@ function renderHero(hero, basePath) {
                 ${hasVisual ? `
                 <div class="hero-visual">
                     <div style="position: relative;">
-                        <img src="${visualUrl}" alt="Hero Visual" class="fade-in-up" style="width: 100%; max-width: 500px; display: block; height: auto; border-radius: 12px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);">
+                        <img src="${visualUrl}" alt="Hero Visual" class="fade-in-up" style="width: 100%; max-width: 500px; display: block; height: auto; border-radius: 12px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);" fetchpriority="high" decoding="async">
                     </div>
                 </div>
                 ` : ''}
@@ -167,7 +168,9 @@ function renderAbout(about, experience, basePath) {
                     <div style="order: 2;">
                         <img src="${basePath}/assets/${about.image}" 
                              style="width: 100%; max-width: 500px; border-radius: var(--border-radius); display: block; margin: 0 auto;" 
-                             alt="About ${about.name || 'trainer'}">
+                             alt="About ${about.name || 'trainer'}" 
+                             loading="lazy" 
+                             decoding="async">
                     </div>
                     <div style="order: 1;">
                         <div style="max-width: 600px;">
@@ -227,7 +230,9 @@ function renderGallery(gallery, basePath) {
                              onmouseout="this.style.transform='scale(1)'">
                             <img src="${basePath}/assets/${img}" 
                                  style="width: 100%; height: 100%; object-fit: cover; display: block;" 
-                                 alt="Gallery ${isGif ? 'animation' : 'image'}">
+                                 alt="Gallery ${isGif ? 'animation' : 'image'}" 
+                                 loading="lazy" 
+                                 decoding="async">
                         </div>
                     `;
     }).join('')}
@@ -283,15 +288,18 @@ function renderContact(programs, contacts) {
 
                 <div style="text-align: center;">
                     <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;">Get in Touch</h3>
-                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                        <a href="${contacts.whatsapp}" target="_blank" class="btn-primary btn-icon" style="min-width: 140px;">
-                            ${ICONS.whatsapp} WhatsApp
+                    <div class="contact-buttons">
+                        <a href="${contacts.whatsapp}" target="_blank" class="btn-primary btn-contact" aria-label="WhatsApp">
+                            ${ICONS.whatsapp}
+                            <span class="btn-text">WhatsApp</span>
                         </a>
-                        <a href="${contacts.instagram}" target="_blank" class="btn-secondary btn-icon" style="min-width: 140px;">
-                             ${ICONS.instagram} Instagram
+                        <a href="${contacts.instagram}" target="_blank" class="btn-secondary btn-contact" aria-label="Instagram">
+                            ${ICONS.instagram}
+                            <span class="btn-text">Instagram</span>
                         </a>
-                        <a href="mailto:${contacts.email}" class="btn-secondary btn-icon" style="min-width: 140px;">
-                             ${ICONS.email} Email
+                        <a href="mailto:${contacts.email}" class="btn-secondary btn-contact" aria-label="Email">
+                            ${ICONS.email}
+                            <span class="btn-text">Email</span>
                         </a>
                     </div>
                 </div>
@@ -309,8 +317,8 @@ function renderTransformations(items, basePath) {
                     ${items.map(t => `
                         <div class="card" style="padding: 0; overflow: hidden; max-width: 500px; margin: 0 auto; width: 100%;">
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border-color);">
-                                <img src="${basePath}/assets/${t.before}" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block;" alt="Before">
-                                <img src="${basePath}/assets/${t.after}" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block;" alt="After">
+                                <img src="${basePath}/assets/${t.before}" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block;" alt="Before" loading="lazy" decoding="async">
+                                <img src="${basePath}/assets/${t.after}" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block;" alt="After" loading="lazy" decoding="async">
                             </div>
 
                         </div>
@@ -550,6 +558,22 @@ function renderNav(menu) {
         </nav>
     `;
 }
+
+function initLazyImages() {
+    // Add loaded class to lazy images when they finish loading
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+
+    lazyImages.forEach(img => {
+        if (img.complete) {
+            img.classList.add('loaded');
+        } else {
+            img.addEventListener('load', () => {
+                img.classList.add('loaded');
+            });
+        }
+    });
+}
+
 
 function initTheme() {
     const savedTheme = localStorage.getItem('theme');

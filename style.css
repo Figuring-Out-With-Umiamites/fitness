@@ -580,7 +580,58 @@ h4 {
   box-shadow: 0 4px 20px rgba(214, 36, 159, 0.3);
 }
 
-/* Button with Icon */
+/* Contact Buttons - Mobile First */
+.contact-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-contact {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  /* Mobile: Icon only (circular) */
+  width: 56px !important;
+  height: 56px !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+}
+
+.btn-contact svg {
+  width: 24px !important;
+  height: 24px !important;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.btn-contact .btn-text {
+  display: none !important;
+}
+
+/* Desktop: Show text, normal button shape */
+@media (min-width: 640px) {
+  .btn-contact {
+    width: auto !important;
+    height: auto !important;
+    padding: 0.875rem 2rem !important;
+    border-radius: 8px !important;
+    min-width: 140px;
+  }
+
+  .btn-contact svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .btn-contact .btn-text {
+    display: inline !important;
+  }
+}
+
+/* Legacy button with icon support */
 .btn-icon {
   display: inline-flex;
   align-items: center;
@@ -592,4 +643,27 @@ h4 {
   width: 20px;
   height: 20px;
   fill: currentColor;
+}
+
+/* Image Loading Optimization */
+img {
+  /* Prevent layout shift while loading */
+  max-width: 100%;
+  height: auto;
+}
+
+img[loading="lazy"] {
+  /* Smooth fade-in when lazy images load */
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+img[loading="lazy"].loaded,
+img[loading="lazy"]:not([src]) {
+  opacity: 1;
+}
+
+/* Ensure images are visible when loaded */
+img:not([loading="lazy"]) {
+  opacity: 1;
 }
