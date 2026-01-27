@@ -19,16 +19,19 @@ const ICONS = {
 };
 
 async function init() {
-    const params = new URLSearchParams(window.location.search);
-    let username = params.get('u');
+    // 1. Try getting username from path
+    const path = window.location.pathname;
+    const pathSegments = path.split('/').filter(segment => segment.length > 0 && segment !== 'index.html');
 
-    // Try getting username from path if not in query params
+    let username = null;
+    if (pathSegments.length > 0) {
+        username = pathSegments[0];
+    }
+
+    // 2. Fallback to query param if not in path
     if (!username) {
-        const path = window.location.pathname;
-        const pathSegments = path.split('/').filter(segment => segment.length > 0 && segment !== 'index.html');
-        if (pathSegments.length > 0) {
-            username = pathSegments[0];
-        }
+        const params = new URLSearchParams(window.location.search);
+        username = params.get('u');
     }
 
     // Fallback logic: if no user, render marketing page
@@ -642,7 +645,7 @@ function renderError() {
             <div>
                 <h1 class="text-title" style="margin-bottom: 1rem;">Trainer Not Found</h1>
                 <p class="text-subtitle" style="margin-bottom: 2rem;">The requested profile does not exist.</p>
-                <a href="/?u=demo" class="btn-primary">View Demo</a>
+                <a href="/demo" class="btn-primary">View Demo</a>
             </div>
         </div>
     `;
