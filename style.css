@@ -475,6 +475,7 @@ h4 {
 @media (max-width: 768px) {
   .nav-bar {
     padding: var(--space-sm) var(--space-md);
+    justify-content: flex-end;
   }
 
   .nav-menu {
@@ -495,6 +496,9 @@ h4 {
 
     .nav-menu {
       padding: 0.5rem;
+      background: transparent;
+      border: none;
+      box-shadow: none;
     }
   }
 }
