@@ -474,7 +474,28 @@ h4 {
 
 @media (max-width: 768px) {
   .nav-bar {
-    display: none;
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .nav-menu {
+    gap: 0.75rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .nav-link {
+    font-size: 0.8125rem;
+  }
+
+  /* Hide nav link text on very small screens, keep theme toggle */
+  @media (max-width: 480px) {
+    .nav-menu li:not(:last-child) {
+      display: none;
+    }
+
+    .nav-menu {
+      padding: 0.5rem;
+    }
   }
 }
 
