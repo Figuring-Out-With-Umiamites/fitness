@@ -1,0 +1,145 @@
+{
+    "name": "Alex Rivet",
+    "title": "Master of Mobility",
+    "hero": {
+        "headline": "Master Your Body. Control Your Mind.",
+        "subheadline": "Elite calisthenics coaching for those who demand more than just fitness. We build functional mastery through discipline and relentless progression.",
+        "background_media": "hero_bg.png",
+        "hero_visual": "hero_visual.png",
+        "cta_text": "Start the Journey"
+    },
+    "about": {
+        "name": "Alex Rivet",
+        "image": "about_me.png",
+        "intro": [
+            "I started training outdoors on my own, with no coach or equipment. My discipline and focus led me to study sports science at a top academy in Ukraine and eventually perform around the world, from France and Chile to Finland and Sweden.",
+            "Since 2020, I've coached people globally, created an app with over 10,000 downloads, and reached millions through my YouTube videos. Today, I'm recognized as one of the top calisthenics athletes and coaches. I am here to help you train smarter, gain real strength, and build lasting progress in body and mind."
+        ]
+    },
+    "gallery": {
+        "images": [
+            "about_me.png",
+            "trans1_before.png",
+            "trans1_after.png",
+            "trans2_before.png"
+        ]
+    },
+    "experience": [
+        {
+            "label": "Athletes Trained",
+            "value": "500+"
+        },
+        {
+            "label": "Years Coaching",
+            "value": "12"
+        },
+        {
+            "label": "Global Seminars",
+            "value": "24"
+        },
+        {
+            "label": "Success Rate",
+            "value": "98%"
+        }
+    ],
+    "programs": [
+        {
+            "title": "The Foundation",
+            "outcome": "Build bulletproof joints and the base strength required for advanced static holds.",
+            "level": "Beginner to Intermediate",
+            "price": null
+        },
+        {
+            "title": "Static Mastery",
+            "outcome": "Unlock the Planche, Front Lever, and Human Flag through specific neurological conditioning.",
+            "level": "Advanced",
+            "price": "$299"
+        },
+        {
+            "title": "Elite 1-on-1",
+            "outcome": "Hyper-personalized movement programming and weekly performance audits.",
+            "level": "Elite",
+            "price": "$500/mo"
+        }
+    ],
+    "transformations": [
+        {
+            "before": "trans1_before.png",
+            "after": "trans1_after.png",
+            "name": "Marcus R."
+        },
+        {
+            "before": "trans2_before.png",
+            "after": "trans2_after.png",
+            "name": "Sarah K."
+        }
+    ],
+    "testimonials": [
+        {
+            "name": "James Vance",
+            "quote": "The most rigorous training I've ever experienced. Alex doesn't just teach moves; he rebuilds your foundation."
+        },
+        {
+            "name": "Elena Rossi",
+            "quote": "Finally, a coach who understands the science of recovery and the psychology of performance."
+        }
+    ],
+    "faqs": [
+        {
+            "question": "Do I need any equipment?",
+            "answer": "Basic pull-up bar and dip station are recommended, but most foundation work is purely bodyweight."
+        },
+        {
+            "question": "Is this suitable for beginners?",
+            "answer": "The Foundation program is designed exactly for that. We scale the movements to your current capability."
+        },
+        {
+            "question": "How long until I see results?",
+            "answer": "Neurological adaptations happen in weeks; structural changes in months. Consistency is the only variable."
+        }
+    ],
+    "who_is_for": [
+        {
+            "icon": "shoe",
+            "title": "STRONG. STUCK ON SKILLS",
+            "description": "You're strong, but planche and advanced skills feel unreachable"
+        },
+        {
+            "icon": "home",
+            "title": "HOME AND STREET ATHLETES",
+            "description": "Training hard in parks or living rooms or gym. Fits everyone"
+        },
+        {
+            "icon": "timer",
+            "title": "LIMITED TIME FOR TRAINING",
+            "description": "Fits into busy schedule to keep you strong and progress with skills"
+        }
+    ],
+    "menu": [
+        {
+            "label": "About",
+            "href": "#about"
+        },
+        {
+            "label": "Transformations",
+            "href": "#transformations"
+        },
+        {
+            "label": "Testimonials",
+            "href": "#testimonials"
+        },
+        {
+            "label": "FAQ",
+            "href": "#faq"
+        },
+        {
+            "label": "Contact",
+            "href": "#contact"
+        }
+    ],
+    "contacts": {
+        "instagram": "https://instagram.com/alexrivet",
+        "whatsapp": "https://wa.me/1234567890",
+        "email": "alex@rivetperformance.com"
+    }
+}

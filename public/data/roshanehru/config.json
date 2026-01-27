@@ -1,0 +1,161 @@
+{
+    "name": "Roshan Nehru",
+    "title": "Elite Calisthenics Athlete & Coach",
+    "hero": {
+        "headline": "Built From Scratch. Forged by Discipline.",
+        "subheadline": "2x National Champion & World Battle of the Year Winner. Online 1-on-1 calisthenics coaching for real strength, skill mastery, and mental resilience.",
+        "background_media": "hero_bg.png",
+        "hero_visual": "hero_visual.png",
+        "cta_text": "Train With Me"
+    },
+    "about": {
+        "name": "Roshan Nehru",
+        "image": "about_me.png",
+        "intro": [
+            "Roshan Nehru’s journey is that of a self-taught, young Indian calisthenics athlete who built everything from scratch — no inheritance, no shortcuts, only discipline and relentless work. With over 10 years of intensive training, he is a 2x National Champion and World Battle of the Year Winner, known for extreme feats such as completing 3,270 pull-ups in 24 hours.",
+            "Starting calisthenics at a young age, Roshan quickly became India’s youngest professional freestyle athlete. His path has been defined by overcoming injuries, mastering unique movement skills, and developing exceptional mental toughness. Today, he coaches athletes worldwide through online 1-on-1 training and workshops, inspiring others to pursue real strength, consistency, and long-term mastery in both body and mind."
+        ]
+    },
+    "gallery": {
+        "images": [
+            "gallery_0.png",
+            "gallery_1.png",
+            "gallery_2.png",
+            "gallery_3.png"
+        ]
+    },
+    "experience": [
+        {
+            "label": "Years Training",
+            "value": "10+"
+        },
+        {
+            "label": "National Titles",
+            "value": "2x"
+        },
+        {
+            "label": "Global Athletes Coached",
+            "value": "3000+"
+        },
+        {
+            "label": "Social Reach",
+            "value": "450K+"
+        }
+    ],
+    "programs": [
+        {
+            "title": "Beginner Strength Blueprint",
+            "outcome": "Build foundational strength, master pull-ups, dips, and core stability.",
+            "level": "Beginner",
+            "price": null
+        },
+        {
+            "title": "Calisthenics Skill Accelerator",
+            "outcome": "Progress toward muscle-ups, levers, and advanced bodyweight control.",
+            "level": "Intermediate to Advanced",
+            "price": null
+        },
+        {
+            "title": "Elite 1-on-1 Coaching",
+            "outcome": "Personalized programming, form analysis, and long-term progression with direct mentorship.",
+            "level": "All Levels",
+            "price": null
+        }
+    ],
+    "transformations": [
+        {
+            "before": "trans1_before.png",
+            "after": "trans1_after.png",
+            "name": "Arjun K."
+        },
+        {
+            "before": "trans2_before.png",
+            "after": "trans2_after.png",
+            "name": "Priya Sharma"
+        }
+    ],
+    "testimonials": [
+        {
+            "name": "Arjun K.",
+            "quote": "I’ve been training with Roshan for 8 months now, and the progress in my calisthenics journey is night and day. His attention to form and progressive overload is unmatched."
+        },
+        {
+            "name": "Priya Sharma",
+            "quote": "He doesn't just give you a workout; he teaches you how to master your own body weight. I’ve never felt more powerful in my movements."
+        },
+        {
+            "name": "Jack",
+            "quote": "I started with zero pull-up strength. Now I’m hitting sets of 8 with ease. Having a 2x National Champion guide you changes everything."
+        },
+        {
+            "name": "Siddharth M.",
+            "quote": "Roshan explains the why behind every exercise. Hands down the best coaching experience I’ve had."
+        },
+        {
+            "name": "Megha W.",
+            "quote": "After just 3 months, I achieved goals I thought were years away. The best investment I’ve made in my fitness."
+        }
+    ],
+    "faqs": [
+        {
+            "question": "Is this suitable for beginners?",
+            "answer": "Yes. Programs are scaled based on your current strength and experience level."
+        },
+        {
+            "question": "Do I need gym equipment?",
+            "answer": "A pull-up bar is recommended, but most training can be done with minimal equipment."
+        },
+        {
+            "question": "Is coaching fully online?",
+            "answer": "Yes. Coaching is delivered online with personalized plans, feedback, and regular check-ins."
+        }
+    ],
+    "who_is_for": [
+        {
+            "icon": "shoe",
+            "title": "BEGINNERS WITH ZERO STRENGTH",
+            "description": "Starting from scratch and want proper guidance"
+        },
+        {
+            "icon": "home",
+            "title": "ATHLETES STUCK ON SKILLS",
+            "description": "You train hard but muscle-ups and levers feel impossible"
+        },
+        {
+            "icon": "timer",
+            "title": "DISCIPLINED INDIVIDUALS",
+            "description": "Ready to commit long-term and build real strength"
+        }
+    ],
+    "menu": [
+        {
+            "label": "About",
+            "href": "#about"
+        },
+        {
+            "label": "Programs",
+            "href": "#programs"
+        },
+        {
+            "label": "Transformations",
+            "href": "#transformations"
+        },
+        {
+            "label": "Testimonials",
+            "href": "#testimonials"
+        },
+        {
+            "label": "FAQ",
+            "href": "#faq"
+        },
+        {
+            "label": "Contact",
+            "href": "#contact"
+        }
+    ],
+    "contacts": {
+        "instagram": "https://www.instagram.com/roshanehru/",
+        "whatsapp": "https://wa.me/919284418432",
+        "email": "roshanehru@gmail.com"
+    }
+}
