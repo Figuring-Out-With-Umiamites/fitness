@@ -219,6 +219,18 @@ h4 {
   font-weight: 500;
 }
 
+/* Experience Grid - Mobile Fix */
+.experience-grid {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.experience-grid .stat-card {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
 /* ... animations ... */
 /* ... sticky cta ... */
 
