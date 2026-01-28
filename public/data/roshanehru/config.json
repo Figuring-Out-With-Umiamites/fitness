@@ -12,16 +12,30 @@
         "name": "Roshan Nehru",
         "image": "about_me.png",
         "intro": [
-            "Roshan Nehru’s journey is that of a self-taught, young Indian calisthenics athlete who built everything from scratch — no inheritance, no shortcuts, only discipline and relentless work. With over 10 years of intensive training, he is a 2x National Champion and World Battle of the Year Winner, known for extreme feats such as completing 3,270 pull-ups in 24 hours.",
-            "Starting calisthenics at a young age, Roshan quickly became India’s youngest professional freestyle athlete. His path has been defined by overcoming injuries, mastering unique movement skills, and developing exceptional mental toughness. Today, he coaches athletes worldwide through online 1-on-1 training and workshops, inspiring others to pursue real strength, consistency, and long-term mastery in both body and mind."
+            "Roshan Nehru’s journey is that of a self-taught Indian calisthenics athlete who built everything from the ground up — no inheritance, no shortcuts, only discipline, resilience, and relentless work. With over 10 years of intensive training, he is a 2x National Champion and World Battle of the Year Winner, recognized globally for extreme feats such as completing 3,270 pull-ups in 24 hours.",
+            "Starting calisthenics at a young age, Roshan became India’s youngest professional freestyle athlete. His path has been shaped by overcoming injuries, mastering advanced movement skills, and developing exceptional mental toughness — experience that directly informs how he coaches others.",
+            "Today, Roshan is known not only as an elite performer but also as a highly effective trainer for all levels and all ages. He has coached complete beginners with zero strength, working professionals, disciplined enthusiasts, and international-level athletes, adapting his methods to suit different bodies, goals, and backgrounds.",
+            "Through online 1-on-1 coaching and global workshops, Roshan trains athletes across countries and cultures, helping them build real strength, consistency, and long-term mastery — not just in calisthenics skills, but in mindset and discipline for life."
         ]
     },
     "gallery": {
         "images": [
-            "gallery_0.png",
             "gallery_1.png",
             "gallery_2.png",
-            "gallery_3.png"
+            "gallery_3.png",
+            "gallery_4.png",
+            "gallery_5.png",
+            "gallery_6.png",
+            "gallery_7.png",
+            "gallery_8.png",
+            "gallery_9.png",
+            "gallery_10.png",
+            "gallery_11.png",
+            "gallery_12.png",
+            "gallery_13.png",
+            "gallery_14.png",
+            "gallery_15.png",
+            "gallery_16.png"
         ]
     },
     "experience": [
@@ -94,6 +108,66 @@
         {
             "name": "Megha W.",
             "quote": "After just 3 months, I achieved goals I thought were years away. The best investment I’ve made in my fitness."
+        },
+        {
+            "name": "Rahul Verma",
+            "quote": "I was stuck at the same level for over a year. Roshan’s structured programming helped me break through plateaus fast."
+        },
+        {
+            "name": "Ananya P.",
+            "quote": "The focus on technique and control completely changed how I train. Every rep finally feels intentional."
+        },
+        {
+            "name": "Kunal S.",
+            "quote": "From assisted holds to my first clean muscle-up — the progressions actually work."
+        },
+        {
+            "name": "Daniel R.",
+            "quote": "Roshan’s coaching is precise and honest. You always know what to fix and how to improve."
+        },
+        {
+            "name": "Neha Kapoor",
+            "quote": "I gained strength without injuries for the first time. That alone makes this coaching stand out."
+        },
+        {
+            "name": "Amit L.",
+            "quote": "The discipline and structure he brings to training is next level. No wasted effort."
+        },
+        {
+            "name": "Chris M.",
+            "quote": "I thought calisthenics was just pull-ups and dips. This completely changed my perspective."
+        },
+        {
+            "name": "Rohit Jain",
+            "quote": "Front lever felt impossible until I followed his step-by-step progressions. Now it’s real."
+        },
+        {
+            "name": "Sarah T.",
+            "quote": "Clear communication, smart programming, and real results. Exactly what I was looking for."
+        },
+        {
+            "name": "Vikram D.",
+            "quote": "Roshan pushes you hard but smart. You feel stronger every single week."
+        },
+        {
+            "name": "Isha Mehta",
+            "quote": "I finally understand how to train instead of just following random workouts."
+        },
+        {
+            "name": "Leo P.",
+            "quote": "Elite-level knowledge broken down in a way that actually makes sense."
+        },
+        {
+            "name": "Nikhil R.",
+            "quote": "My strength, mobility, and confidence all improved together. Rare combination."
+        },
+        {
+            "name": "Emma W.",
+            "quote": "Every session has purpose. That’s what separates this from generic online coaching."
+        },
+        {
+            "name": "Aditya Singh",
+            "quote": "If you’re serious about calisthenics, this is the level of coaching you want."
         }
     ],
     "faqs": [
@@ -122,9 +196,9 @@
             "description": "You train hard but muscle-ups and levers feel impossible"
         },
         {
-            "icon": "timer",
-            "title": "DISCIPLINED INDIVIDUALS",
-            "description": "Ready to commit long-term and build real strength"
+            "icon": "shoe",
+            "title": "ELITE ATHLETES",
+            "description": "High-level athletes training and competing on a global stage"
         }
     ],
     "menu": [
