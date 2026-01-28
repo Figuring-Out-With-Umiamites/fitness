@@ -15,7 +15,8 @@ const ICONS = {
     home: '<svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>',
     timer: '<svg viewBox="0 0 24 24"><path d="M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42C16.07 4.74 14.12 4 12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9 9-4.03 9-9c0-2.12-.74-4.07-1.97-5.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7-7 7z"/></svg>',
     sun: '<svg viewBox="0 0 24 24"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 000-1.41.996.996 0 00-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 000 1.41.996.996 0 001.41 0l1.06-1.06c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06z"/></svg>',
-    moon: '<svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-3.03 0-5.5-2.47-5.5-5.5 0-1.82.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/></svg>'
+    moon: '<svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-3.03 0-5.5-2.47-5.5-5.5 0-1.82.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/></svg>',
+    star: '<svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>'
 };
 
 async function init() {
@@ -175,9 +176,9 @@ function renderAbout(about, experience, basePath) {
                     <div style="order: 1;">
                         <div style="max-width: 600px;">
                             ${about.intro ? about.intro.map(paragraph => `
-                                <p style="color: var(--color-gray-700); line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.0625rem;">${paragraph}</p>
+                                <p class="text-subtitle" style="margin-bottom: 1.5rem; font-size: 1.0625rem;">${paragraph}</p>
                             `).join('') : `
-                                <p style="color: var(--color-gray-700); line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.0625rem;">${about.story}</p>
+                                <p class="text-subtitle" style="margin-bottom: 1.5rem; font-size: 1.0625rem;">${about.story}</p>
                             `}
                         </div>
                     </div>
@@ -267,15 +268,15 @@ function renderContact(programs, contacts) {
                 <p class="text-subtitle" style="text-align: center; margin-bottom: 3rem;">Choose your path and let's begin your journey to mastery.</p>
 
                 <div class="card" style="margin-bottom: 3rem;">
-                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--color-gray-900);">Available Programs</h3>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;">Available Programs</h3>
                     <ul style="list-style: none; padding: 0; margin: 0;">
                         ${programs.map(p => `
                             <li style="padding: 1.25rem 0; border-bottom: 1px solid var(--border-color);">
                                 <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap;">
                                     <div style="flex: 1; min-width: 200px;">
-                                        <h4 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--color-gray-900);">${p.title}</h4>
-                                        <p style="color: var(--color-gray-600); margin-bottom: 0.5rem; line-height: 1.6; font-size: 0.9375rem;">${p.outcome}</p>
-                                        <span class="text-small" style="color: var(--color-gray-500);">Level: ${p.level}</span>
+                                        <h4 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">${p.title}</h4>
+                                        <p style="color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.6; font-size: 0.9375rem;">${p.outcome}</p>
+                                        <span class="text-small">Level: ${p.level}</span>
                                     </div>
                                     ${p.price ? `
                                     <div style="text-align: right;">
@@ -332,17 +333,22 @@ function renderTransformations(items, basePath) {
 }
 
 function renderTestimonials(quotes) {
+    const stars = `<div style="display: flex; gap: 0.25rem; margin-bottom: 1rem; justify-content: center;">
+        ${Array(5).fill(`<div style="width: 20px; height: 20px; fill: #FBBF24;">${ICONS.star}</div>`).join('')}
+    </div>`;
+
     return `
         <section id="testimonials" class="section-padding bg-gray">
             <div class="container">
-                <h2 class="text-title" style="margin-bottom: 3rem;">Testimonials</h2>
+                <h2 class="text-title" style="margin-bottom: 3rem; text-align: center;">Success Stories</h2>
                 <div class="testimonial-carousel">
                     <div class="testimonial-track" id="testimonial-track">
                         ${quotes.map((q, index) => `
                             <div class="testimonial-slide">
-                                <div class="card" style="max-width: 800px; margin: 0 auto;">
-                                    <p style="font-size: 1.125rem; line-height: 1.7; margin-bottom: 1.5rem; color: var(--color-gray-700);">${q.quote}</p>
-                                    <cite style="font-size: 0.875rem; font-weight: 500; font-style: normal; color: var(--color-gray-900);">— ${q.name}</cite>
+                                <div class="card" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                                    ${stars}
+                                    <p style="font-size: 1.125rem; line-height: 1.7; margin-bottom: 1.5rem; color: var(--text-muted); font-style: italic;">"${q.quote}"</p>
+                                    <cite style="font-size: 0.875rem; font-weight: 600; font-style: normal; color: var(--text-main); text-transform: uppercase; letter-spacing: 0.05em;">— ${q.name}</cite>
                                 </div>
                             </div>
                         `).join('')}
@@ -368,9 +374,9 @@ function renderFAQs(faqs) {
                         <details class="card" style="cursor: pointer; padding: 1.5rem;">
                             <summary style="font-weight: 500; font-size: 1.0625rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">
                                 ${f.question}
-                                <span style="color: var(--color-gray-400); font-size: 1.25rem; transition: transform 0.3s;">+</span>
+                                <span style="color: var(--text-muted); font-size: 1.25rem; transition: transform 0.3s;">+</span>
                             </summary>
-                            <p style="margin-top: 1rem; color: var(--color-gray-600); line-height: 1.7;">${f.answer}</p>
+                            <p style="margin-top: 1rem; color: var(--text-muted); line-height: 1.7;">${f.answer}</p>
                         </details>
                     `).join('')}
                 </div>
@@ -578,29 +584,30 @@ function initLazyImages() {
 
 
 function initTheme() {
-    const savedTheme = localStorage.getItem('theme');
+    const savedTheme = localStorage.getItem('theme') || 'light';
     const toggle = document.getElementById('theme-toggle');
 
-    // Default is dark (no class), light is 'light' class
-    if (savedTheme === 'light') {
-        document.documentElement.setAttribute('data-theme', 'light');
+    if (savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+        document.documentElement.removeAttribute('data-theme');
     }
 
     if (toggle) {
-        toggle.innerHTML = savedTheme === 'light' ? ICONS.moon : ICONS.sun;
+        toggle.innerHTML = savedTheme === 'dark' ? ICONS.sun : ICONS.moon;
 
         toggle.addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            const newTheme = isDark ? 'light' : 'dark';
 
-            if (newTheme === 'light') {
-                document.documentElement.setAttribute('data-theme', 'light');
-                toggle.innerHTML = ICONS.moon;
-                localStorage.setItem('theme', 'light');
-            } else {
-                document.documentElement.removeAttribute('data-theme');
+            if (newTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
                 toggle.innerHTML = ICONS.sun;
                 localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+                toggle.innerHTML = ICONS.moon;
+                localStorage.setItem('theme', 'light');
             }
         });
     }
@@ -770,21 +777,28 @@ function renderMarketingPage() {
     // Initialize marketing theme toggle
     const toggle = document.getElementById('theme-toggle-marketing');
     if (toggle) {
-        const savedTheme = localStorage.getItem('theme');
-        toggle.innerHTML = savedTheme === 'light' ? ICONS.moon : ICONS.sun;
+        const savedTheme = localStorage.getItem('theme') || 'light';
+
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+            document.documentElement.removeAttribute('data-theme');
+        }
+
+        toggle.innerHTML = savedTheme === 'dark' ? ICONS.sun : ICONS.moon;
 
         toggle.addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            const newTheme = isDark ? 'light' : 'dark';
 
-            if (newTheme === 'light') {
-                document.documentElement.setAttribute('data-theme', 'light');
-                toggle.innerHTML = ICONS.moon;
-                localStorage.setItem('theme', 'light');
-            } else {
-                document.documentElement.removeAttribute('data-theme');
+            if (newTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
                 toggle.innerHTML = ICONS.sun;
                 localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+                toggle.innerHTML = ICONS.moon;
+                localStorage.setItem('theme', 'light');
             }
         });
     }
