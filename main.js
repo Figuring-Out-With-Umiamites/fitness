@@ -66,12 +66,13 @@ async function init() {
     }
 }
 
+
 function renderApp(config, basePath) {
     const main = document.querySelector(APP_SELECTOR);
 
     main.innerHTML = `
         ${renderNav(config.menu)}
-        ${renderHero(config.hero, basePath)}
+        ${renderHero(config.hero, basePath, config.contacts)}
         ${renderAbout(config.about, config.experience, basePath)}
         ${config.gallery ? renderGallery(config.gallery, basePath) : ''}
         ${renderWhoIsThisFor(config.who_is_for)}
@@ -84,7 +85,7 @@ function renderApp(config, basePath) {
     `;
 }
 
-function renderHero(hero, basePath) {
+function renderHero(hero, basePath, contacts) {
     const hasVisual = hero.hero_visual ? true : false;
     const visualUrl = hasVisual ? `${basePath}/assets/${hero.hero_visual}` : '';
 
@@ -94,7 +95,17 @@ function renderHero(hero, basePath) {
                 <div class="hero-content">
                     <h1 class="text-hero" style="margin-bottom: 1.5rem;">${hero.headline}</h1>
                     <p class="text-subtitle" style="max-width: 650px; margin-bottom: 2.5rem;">${hero.subheadline}</p>
-                    <a href="#contact" class="btn-primary">${hero.cta_text}</a>
+                    <div style="display: flex; flex-direction: column; gap: 1rem; align-items: ${hasVisual ? 'flex-start' : 'center'};">
+                        <a href="#contact" class="btn-primary">${hero.cta_text}</a>
+                        ${contacts && contacts.instagram ? `
+                        <a href="${contacts.instagram}" target="_blank" class="hero-instagram-link" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-muted); text-decoration: none; font-size: 0.9375rem; transition: var(--transition-smooth);">
+                            <span style="width: 20px; height: 20px; fill: currentColor; display: flex; align-items: center; justify-content: center;">
+                                ${ICONS.instagram}
+                            </span>
+                            <span>DM for details</span>
+                        </a>
+                        ` : ''}
+                    </div>
                 </div>
                 ${hasVisual ? `
                 <div class="hero-visual">
@@ -132,6 +143,19 @@ function renderHero(hero, basePath) {
                     transform: scale(1.02) rotate(1deg);
                 }
 
+                .hero-instagram-link:hover {
+                    color: var(--text-main);
+                    transform: translateX(2px);
+                }
+
+                .hero-instagram-link svg {
+                    transition: transform 0.3s ease;
+                }
+
+                .hero-instagram-link:hover svg {
+                    transform: scale(1.1);
+                }
+
                 @media (min-width: 900px) {
                      .hero-container {
                         grid-template-columns: ${hasVisual ? '1fr 1fr' : '1fr'};
@@ -150,6 +174,9 @@ function renderHero(hero, basePath) {
                     .hero-content p {
                          margin-left: auto;
                          margin-right: auto;
+                    }
+                    .hero-content > div {
+                        align-items: center !important;
                     }
                     .hero-visual {
                         margin-top: 2rem;
